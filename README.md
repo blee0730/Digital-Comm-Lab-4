@@ -9,9 +9,11 @@ This is the block diagram used for the first part of this lab. The multiplier bl
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/1da9d35e-d455-40dd-8725-af4029744a2a)
 
 Question 1: What is the relationship between the digital signal and the presence of the carrier in the ASK signal?
+
 The carrier sine wave is being modulated by the square wave only showing when the square wave is high and flatlining when it is low.
 
 Question 2: What is the ASK signal's voltage when the digital signal is logic-0?
+
 The signal's voltage flatlines to 0V when the digital signal is a logic-0.
 
 #### Modified ASK Generation
@@ -21,6 +23,7 @@ This is the block diagram used for the modified ASK generation which changes the
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/9f7d07ba-cda6-494d-bdf1-ad97367a7963)
 
 Question 3: What feature of the ASK signal suggests that it's an AM signal?
+
 It is an AM signal because the ASK is changing the amplitude of the carrier signal with reference to the digital square wave's logic-1s and logic-0s.
 
 ### Part B - Demodulating an ASK signal using an envelope detector
@@ -34,9 +37,11 @@ This block diagram shows the previous block diagram from part A on the left hand
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/68718e12-aebf-4370-a2f8-b71017ac58fe)
 
 Question 4: Why is the recovered digital signal not a perfect copy of the original?
+
 This is because the low-pass filter inevitably cuts off some of the harmonics of the square wave as there are an infinite amount and shifts the phase of the signal creating a time delay.
 
 Question 5: What can be used to "clean-up" the recovered digital signal?
+
 By using a Schmitt trigger that can detect when there is a rising and falling edge.
 
 ### Part C - Restoring the recovered digital signal using a comparator
@@ -46,6 +51,7 @@ This block diagram just adds a comparator that is comparing the ASK signal to a 
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/9c807570-2ede-4c15-827c-8f060d7a822f)
 
 Question 6: How does the comparator turn the slow rising voltages of the recovered digital signal into sharp transitions?
+
 This is because of the comparator that compares the voltage changes with the average middle value of the waveform.
 
 ### Noise
@@ -70,12 +76,15 @@ This is the block diagram used for the first part of this lab. The waveform gene
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/7ae86121-dc44-41b2-bfe4-5b1a38795333)
 
 Question 1: What's the name for the VCO output frequency that corresponds with logic-1s in the digital data?
+
 The name of the output frequency that corresponds with the logic-1s is the mark.
 
 Question 2: What's the name for the VCO output frequency that corresponds with logic-0s in the digital data?
+
 The name of the output frequency that corresponds with the logic-0s is the space.
 
 Question 3: Based on your observations of the FSK signal, which of the two is the higher frequency? Explain your answer.
+
 The higher frequency is shown to correspond with when the square wave is at logic-1 which also corresponds to the mark, thus the mark is the higher frequency symbol.
 
 ### Part B - Demodulating an FSK signal using filtering and an envelope detector
@@ -86,9 +95,11 @@ This block diagram passes the signal through a low pass filter that has gain con
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/e014b638-5a1c-46e2-bcd0-99d97a3d2f6e)
 
 Question 4: Which of the FSK signal's two sinewaves is the filter picking out?
+
 The filter is picking out the higher frequency wave, as the cut off frequency is lowered the higher frequencies are getting removed thus only leaving the lower frequency wave.
 
 Question 5: What does the filtered FSK signal look like?
+
 It looks like a ASK signal that is inverted with the higher amplitude corresponding to the logic-0 and the lower amplitude corresponding to the logic-1.
 
 #### Rectifier and Bandpass Filter
@@ -96,6 +107,7 @@ The low pass filter's gain and cut off frequency are moved back to fully clockwi
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/88fb7c67-2019-4bbe-8e59-ebe722cbd3a1)
 
 Question 6: What can be used to "clean up" the recovered digital signal?
+
 Similar to the ASK the Schmitt trigger can be used to recover the signal cleanly.
 
 ### Part C - Restoring the recovered data using a comparator
@@ -104,4 +116,5 @@ This block diagram just adds the restoration section with the comparator and the
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/352f54bc-c58d-44ad-bd39-3506388e2cbb)
 
 Question 7: How does the comparator turn the slow rising voltages of the recovered digital signal into sharp transitions?
+
 This is again similar to the ASK example where the comparator compares the voltage changes with the average middle value of the waveform.
