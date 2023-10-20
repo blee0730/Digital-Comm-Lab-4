@@ -113,6 +113,7 @@ Similar to the ASK the Schmitt trigger can be used to recover the signal cleanly
 ### Part C - Restoring the recovered data using a comparator
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/0059b8af-eb93-4025-b1f0-14942f845b29)
 This block diagram just adds the restoration section with the comparator and the DC reference voltage like the ASK. The restored waveform is slightly shifted from the original but otherwise the amplitudes are the same as shown below:
+
 ![image](https://github.com/blee0730/Digital-Comm-Lab-4/assets/130094173/352f54bc-c58d-44ad-bd39-3506388e2cbb)
 
 Question 7: How does the comparator turn the slow rising voltages of the recovered digital signal into sharp transitions?
